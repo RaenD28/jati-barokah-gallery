@@ -1,0 +1,484 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #f0b57c;
+  --secondary: #a5682f;
+  --lightbrown: #fff5ea;
+  --whatsapp: #1faf38;
+  --bg: #f5f5f5;
+  --text: #222222;
+  --subtext: #aaaaaa;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: var(--text);
+}
+
+body {
+  background-color: var(--bg);
+  margin-top: 6rem;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  border-bottom: 2px solid #dadada;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar .logo-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .logo-nav img {
+  height: 4rem;
+}
+
+.navbar .navbar-menu a {
+  margin: 0 0.8rem;
+  display: inline-block;
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.navbar .navbar-menu a:hover {
+  color: var(--secondary);
+}
+
+.navbar .navbar-menu a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s ease-in-out;
+  transform-origin: 0 0;
+}
+
+.navbar .navbar-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra {
+  display: none;
+}
+
+/* HOME */
+.home {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/banner-buffet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 70%);
+}
+
+.home .content {
+  padding: 1.4rem 7%;
+  color: white;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.home .content .garis-home {
+  content: "";
+  position: absolute;
+  height: 80%;
+  border-right: 0.1rem solid white;
+}
+
+.home .content .judul-home {
+  margin-left: 2rem;
+}
+
+.home .content h3 {
+  font-weight: 500;
+  font-size: 1.8em;
+  color: white;
+}
+
+.home .content h1 {
+  font-size: 5em;
+  width: 70%;
+  line-height: 6rem;
+  color: white;
+}
+
+.home .content span {
+  color: var(--primary);
+}
+
+/* ABOUT */
+.about {
+  position: relative;
+  padding: 5rem 8%;
+}
+
+.about .kotak-about {
+  display: block;
+  position: absolute;
+  background-color: var(--primary);
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.about .row-about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about img {
+  background-size: cover;
+  width: 45rem;
+}
+
+.about .row-about .content-about {
+  max-width: 40rem;
+}
+
+.about img,
+.content-about {
+  flex: 1 1 40rem;
+}
+
+.about .row-about .content-about h2 {
+  font-size: 2rem;
+}
+
+.about .row-about .content-about h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.5rem solid var(--primary);
+}
+
+.about .row-about .content-about p {
+  text-align: justify;
+}
+
+/* KATEGORI */
+.kategori {
+  padding: 5rem 8%;
+  background-color: var(--lightbrown);
+}
+
+.kategori h2,
+.mengapa h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.row-kategori {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.card-kategori {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 28rem;
+  height: 35rem;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-kategori img {
+  object-fit: cover;
+  height: 35rem;
+}
+
+.card-kategori .isi-card {
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: inherit;
+  box-sizing: border-box;
+}
+
+.card-kategori .isi-card h2 {
+  display: flex;
+  gap: 1rem;
+  color: white;
+  text-align: justify;
+}
+
+.card-kategori .isi-card h2::before {
+  content: "";
+  display: inline-block;
+  border: 0.3rem solid var(--primary);
+}
+
+/* MENGAPA PRODUK KAMI? */
+.mengapa,
+.konsul {
+  padding: 5rem 8%;
+}
+
+.mengapa .row-mengapa {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+
+.mengapa .row-mengapa .card-mengapa {
+  width: 25rem;
+  height: 35rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 15px rgb(90, 90, 90);
+}
+
+.mengapa .row-mengapa .card-mengapa img {
+  height: 15rem;
+}
+
+.mengapa .row-mengapa .card-mengapa h3 {
+  font-size: 1.8rem;
+}
+
+/* BANNER KECIL */
+.banner-kecil {
+  padding: 5rem 8%;
+  background-color: var(--primary);
+}
+
+.banner-kecil .isi-banner-kecil {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+  align-items: center;
+  flex: 1 1 50rem;
+}
+
+.banner-kecil .isi-banner-kecil h1 {
+  font-size: 4.5rem;
+  width: 50%;
+  line-height: 6rem;
+  /* background-color: red; */
+}
+
+.isi-banner-kecil img {
+  height: 20rem;
+}
+
+/* KONSUL */
+
+.konsul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.konsul .gambar-konsul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.konsul .gambar-konsul img {
+  width: 40rem;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.konsul h1 {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 4rem;
+  line-height: 6rem;
+}
+
+.konsul .button-wa {
+  background-color: var(--whatsapp);
+  border: 2px solid var(--whatsapp);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.konsul .button-wa:hover {
+  background-color: var(--bg);
+  color: var(--whatsapp);
+  cursor: pointer;
+}
+
+.konsul .button-wa img {
+  width: 2.5rem;
+}
+
+/* FOOTER */
+footer {
+  padding: 5rem 8%;
+  background-color: white;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.footer-content .footer-kiri {
+  width: 35%;
+}
+
+.footer-content .alamat,
+.telepon,
+.insta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.footer-content .gmail,
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.footer-content .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer-content .garis {
+  border-top: 1px solid #dadada;
+  margin: 1rem 0;
+}
+
+.watermark {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* MEDIA QUERIES */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+
+  .banner-kecil .isi-banner-kecil h1 {
+    text-align: center;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  .navbar .navbar-extra {
+    display: inline-block;
+    padding: 1rem;
+  }
+
+  .navbar .navbar-extra.active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar .navbar-extra a {
+    color: var(--text);
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar .navbar-menu a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 60%;
+  }
+}
