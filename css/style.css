@@ -116,7 +116,7 @@ body {
   content: "";
   position: absolute;
   height: 80%;
-  border-right: 0.1rem solid white;
+  border-right: 0.2rem solid white;
 }
 
 .home .content .judul-home {
@@ -147,7 +147,7 @@ body {
 }
 
 .about .kotak-about {
-  display: block;
+  display: flex;
   position: absolute;
   background-color: var(--primary);
   left: 0;
@@ -159,14 +159,14 @@ body {
 
 .about .row-about {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
 
 .about img {
-  background-size: cover;
+  object-fit: cover;
   width: 45rem;
+  flex: 1 1 45rem;
 }
 
 .about .row-about .content-about {
@@ -209,8 +209,8 @@ body {
 
 .row-kategori {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -266,7 +266,6 @@ body {
   align-items: center;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  flex-wrap: wrap;
 }
 
 .mengapa .row-mengapa .card-mengapa {
@@ -299,21 +298,22 @@ body {
 .banner-kecil .isi-banner-kecil {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap-reverse;
   gap: 2rem;
   align-items: center;
-  flex: 1 1 50rem;
 }
 
 .banner-kecil .isi-banner-kecil h1 {
   font-size: 4.5rem;
   width: 50%;
   line-height: 6rem;
+  flex: 1 1 50rem;
   /* background-color: red; */
 }
 
 .isi-banner-kecil img {
   height: 20rem;
+  flex: 1 1 50rem;
+  object-fit: cover;
 }
 
 /* KONSUL */
@@ -377,12 +377,13 @@ footer {
 
 footer .footer-content {
   display: flex;
-  flex-wrap: wrap-reverse;
   justify-content: center;
+  gap: 1rem;
 }
 
 .footer-content .footer-kiri {
   width: 35%;
+  flex: 1 1 15rem;
 }
 
 .footer-content .alamat,
@@ -403,7 +404,7 @@ footer .footer-content {
 }
 
 .footer-content .map {
-  flex: 1 1 45rem;
+  flex: 1 1 40rem;
   width: 100%;
   object-fit: cover;
 }
@@ -421,13 +422,30 @@ footer .footer-content {
 
 /* MEDIA QUERIES */
 /* Laptop */
-@media (max-width: 1366px) {
+@media (max-width: 1280px) {
   html {
     font-size: 80%;
   }
-
+  .about .row-about {
+    flex-wrap: wrap;
+  }
+  .row-kategori {
+    flex-wrap: wrap;
+  }
+  .mengapa .row-mengapa {
+    flex-wrap: wrap;
+  }
+  .banner-kecil .isi-banner-kecil {
+    flex-wrap: wrap-reverse;
+  }
   .banner-kecil .isi-banner-kecil h1 {
     text-align: center;
+  }
+  .about .kotak-about {
+    width: 15%;
+  }
+  footer .footer-content {
+    flex-wrap: wrap-reverse;
   }
 }
 
