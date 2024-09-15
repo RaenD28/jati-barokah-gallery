@@ -163,7 +163,7 @@ body {
   gap: 2rem;
 }
 
-.about img {
+.about .gambar-galeri-segitiga {
   object-fit: cover;
   width: 45rem;
   flex: 1 1 45rem;
@@ -173,7 +173,6 @@ body {
   max-width: 40rem;
 }
 
-.about img,
 .content-about {
   flex: 1 1 40rem;
 }
@@ -395,6 +394,10 @@ footer .footer-content {
   margin: 1rem 0;
 }
 
+.footer-content .insta:hover {
+  color: var(--secondary);
+}
+
 .footer-content .gmail,
 .whatsapp {
   display: flex;
@@ -498,5 +501,17 @@ footer .footer-content {
 @media (max-width: 450px) {
   html {
     font-size: 60%;
+  }
+
+  .about .gambar-galeri-segitiga {
+    width: 30rem;
+  }
+
+  .isi-banner-kecil img {
+    width: 15rem;
+  }
+
+  .konsul .gambar-konsul img {
+    width: 30rem;
   }
 }

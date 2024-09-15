@@ -26,3 +26,34 @@
   z-index: 1;
   font-size: 3rem;
 }
+
+.isi-galeri {
+  padding: 5rem 8%;
+}
+
+.isi-galeri .isi-foto-galeri {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.isi-foto-galeri .foto-galeri {
+  width: 25rem;
+  height: 25rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.isi-foto-galeri .foto-galeri img {
+  transition: 0.2s;
+  object-fit: cover;
+  width: 25rem;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.isi-foto-galeri .foto-galeri img:hover {
+  transform: scale(1.1);
+}

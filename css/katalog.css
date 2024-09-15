@@ -26,3 +26,51 @@
   z-index: 1;
   font-size: 3rem;
 }
+
+.isi-katalog {
+  padding: 5rem 8%;
+}
+
+.isi-katalog .download-katalog {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  align-items: center;
+}
+
+.isi-katalog .download-katalog h2 {
+  font-size: 2rem;
+}
+
+.isi-katalog .download-katalog h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.5rem solid var(--primary);
+}
+
+.isi-katalog .download-katalog .preview-katalog {
+  width: 50rem;
+}
+
+.download-katalog .tombol-download {
+  padding: 1rem 2.5rem;
+  background-color: var(--primary);
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+.download-katalog .tombol-download:hover {
+  cursor: pointer;
+  background-color: #ffcc9c;
+}
+
+@media (max-width: 768px) {
+  .isi-katalog .download-katalog .preview-katalog {
+    width: 35rem;
+  }
+}
