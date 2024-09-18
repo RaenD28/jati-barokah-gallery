@@ -36,18 +36,27 @@
 }
 
 .profil .profil-awal {
-display: flex;
-align-items: center;
-flex-direction: column;
-gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .profil .profil-awal .profil-jati p {
-  margin-top: 0.5rem;
+  margin: 1rem 0;
   text-align: justify;
 }
 
 .profil .profil-awal img {
-  width: 50%;
+  width: 60%;
   object-fit: cover;
+}
+
+.profil-awal .visi,
+.misi,
+.pelayanan,
+.furniture-custom {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-bottom: 2px solid #dadada;
 }

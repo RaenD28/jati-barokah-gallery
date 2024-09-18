@@ -57,3 +57,49 @@
 .isi-foto-galeri .foto-galeri img:hover {
   transform: scale(1.1);
 }
+
+.isi-galeri .foto-popup {
+  position: fixed;
+  display: none;
+  top: 5rem;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.isi-galeri .foto-popup span {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+  /* mix-blend-mode: difference; */
+  background-color: var(--text);
+  padding: 0 1rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.isi-galeri .foto-popup img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vh;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .isi-galeri .foto-popup img {
+    width: 75vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .isi-galeri .foto-popup img {
+    width: 50vh;
+  }
+}

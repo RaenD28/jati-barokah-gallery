@@ -219,7 +219,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 28rem;
+  width: 25rem;
   height: 35rem;
   background-color: white;
   overflow: hidden;
@@ -325,7 +325,7 @@ body {
 
 .konsul .gambar-konsul {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -387,15 +387,11 @@ footer .footer-content {
 
 .footer-content .alamat,
 .telepon,
-.insta {
+.insta, .facebook {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin: 1rem 0;
-}
-
-.footer-content .insta:hover {
-  color: var(--secondary);
 }
 
 .footer-content .gmail,
@@ -417,6 +413,33 @@ footer .footer-content {
   margin: 1rem 0;
 }
 
+.footer-content .footer-kiri .insta .nama-ig {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-content .footer-kiri .insta .nama-ig .ig-1,
+.ig-2 {
+  text-decoration: none;
+}
+
+.footer-content .footer-kiri .insta .nama-ig .ig-1:hover {
+  color: var(--secondary);
+}
+
+.footer-content .footer-kiri .insta .nama-ig .ig-2:hover {
+  color: var(--secondary);
+}
+
+.footer-content .footer-kiri .facebook .fb-nama {
+  text-decoration: none;
+}
+
+.footer-content .footer-kiri .facebook .fb-nama:hover {
+  color: var(--secondary);
+}
+
 .watermark {
   background-color: var(--primary);
   text-align: center;
@@ -432,6 +455,9 @@ footer .footer-content {
   .about .row-about {
     flex-wrap: wrap;
   }
+  .about .kotak-about {
+    width: 15%;
+  }
   .row-kategori {
     flex-wrap: wrap;
   }
@@ -444,8 +470,8 @@ footer .footer-content {
   .banner-kecil .isi-banner-kecil h1 {
     text-align: center;
   }
-  .about .kotak-about {
-    width: 15%;
+  .konsul .gambar-konsul {
+    flex-wrap: wrap;
   }
   footer .footer-content {
     flex-wrap: wrap-reverse;

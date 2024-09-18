@@ -1,0 +1,14 @@
+.isi-kontak {
+  padding: 5rem 8%;
+}
+
+.isi-kontak .alamat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.isi-kontak .alamat img {
+  width: 60%;
+  object-fit: cover;
+}
