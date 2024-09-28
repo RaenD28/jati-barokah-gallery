@@ -229,6 +229,11 @@ body {
 .card-kategori img {
   object-fit: cover;
   height: 35rem;
+  transition: 0.2s;
+}
+
+.card-kategori img:hover {
+  scale: 1.05;
 }
 
 .card-kategori .isi-card {
@@ -243,6 +248,7 @@ body {
   display: flex;
   gap: 1rem;
   color: white;
+  font-size: 1.8rem;
   text-align: justify;
 }
 
