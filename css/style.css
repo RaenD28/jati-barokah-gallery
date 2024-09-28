@@ -387,7 +387,8 @@ footer .footer-content {
 
 .footer-content .alamat,
 .telepon,
-.insta, .facebook {
+.insta,
+.facebook {
   display: flex;
   align-items: center;
   gap: 1rem;

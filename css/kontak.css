@@ -4,11 +4,70 @@
 
 .isi-kontak .alamat {
   display: flex;
+  position: relative;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
 .isi-kontak .alamat img {
   width: 60%;
   object-fit: cover;
+}
+
+.isi-kontak .alamat h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.isi-kontak .alamat h2 {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.5rem solid var(--primary);
+}
+
+.alamat h3 {
+  margin: 1rem 0;
+}
+
+.isi-kontak .button-nanya {
+  border-top: 2px solid #dadada;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.isi-kontak .button-nanya h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.button-wa {
+  background-color: var(--whatsapp);
+  border: 2px solid var(--whatsapp);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.button-wa:hover {
+  background-color: var(--bg);
+  color: var(--whatsapp);
+  cursor: pointer;
+}
+
+.button-wa img {
+  width: 2.5rem;
 }
