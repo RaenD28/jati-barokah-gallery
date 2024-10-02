@@ -1,0 +1,119 @@
+.detail-produk {
+  padding: 5rem 8%;
+}
+
+.container-detail {
+  display: flex;
+  gap: 2rem;
+  /* background-color: red; */
+}
+
+.container-detail img {
+  flex: 1;
+  height: 36rem;
+  object-fit: cover;
+}
+
+.container-detail .deskripsi-produk {
+  flex: 1;
+}
+
+.container-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.container-detail .deskripsi-produk p {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.button-wa {
+  background-color: var(--whatsapp);
+  border: 2px solid var(--whatsapp);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.button-wa:hover {
+  background-color: var(--bg);
+  color: var(--whatsapp);
+  cursor: pointer;
+}
+
+.button-wa img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* CARD REKOMEN PRODUK */
+.rekomen-produk {
+  padding: 0 8% 5rem;
+}
+
+.rekomen-produk .judul-rekomen {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.rekomen-produk .judul-rekomen::after {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.5rem solid var(--primary);
+}
+
+.rekomen-produk .container-card-produk {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.rekomen-produk .container-card-produk .card-produk {
+  width: 20rem;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 0 8px rgb(101, 101, 101);
+}
+
+.rekomen-produk .container-card-produk .card-produk img {
+  width: 100%;
+}
+
+.rekomen-produk .container-card-produk .card-produk .tombol-produk {
+  padding: 0.5rem 2rem;
+  background-color: var(--primary);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.card-produk .tombol-produk:hover {
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+/* LAPTOP */
+@media (max-width: 1280px) {
+  .container-detail {
+    flex-wrap: wrap;
+  }
+}

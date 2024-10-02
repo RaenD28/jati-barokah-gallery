@@ -33,8 +33,9 @@
 
 .isi-kategori .isi-card-kategori {
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }

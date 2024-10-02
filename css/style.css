@@ -147,13 +147,12 @@ body {
 }
 
 .about .kotak-about {
-  display: flex;
   position: absolute;
   background-color: var(--primary);
-  left: 0;
-  bottom: 0;
   top: 0;
+  left: 0;
   width: 30%;
+  height: 100%;
   z-index: -1;
 }
 
@@ -163,18 +162,19 @@ body {
   gap: 2rem;
 }
 
-.about .gambar-galeri-segitiga {
+.about .gambar-about {
+  overflow: hidden;
+}
+
+.about .gambar-about img {
   object-fit: cover;
-  width: 45rem;
-  flex: 1 1 45rem;
+  width: 50rem;
+  flex: 1 1 50rem;
 }
 
 .about .row-about .content-about {
-  max-width: 40rem;
-}
-
-.content-about {
-  flex: 1 1 40rem;
+  max-width: 50rem;
+  flex: 1 1 50rem;
 }
 
 .about .row-about .content-about h2 {
@@ -454,16 +454,25 @@ footer .footer-content {
 }
 
 /* MEDIA QUERIES */
-/* Laptop */
+
+/* Laptop lebar */
+@media (max-width: 1440px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* Laptop biasa */
 @media (max-width: 1280px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
   .about .row-about {
     flex-wrap: wrap;
   }
   .about .kotak-about {
-    width: 15%;
+    width: 100%;
+    height: 35%;
   }
   .row-kategori {
     flex-wrap: wrap;
@@ -488,7 +497,7 @@ footer .footer-content {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
 
   .navbar .navbar-extra {
@@ -531,9 +540,9 @@ footer .footer-content {
 }
 
 /* Mobile */
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   html {
-    font-size: 60%;
+    font-size: 65%;
   }
 
   .about .gambar-galeri-segitiga {
