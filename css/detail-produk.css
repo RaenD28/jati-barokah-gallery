@@ -76,7 +76,8 @@
 
 .rekomen-produk .container-card-produk {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  overflow-x: scroll;
   gap: 2rem;
   /* justify-content: center; */
   align-items: center;
