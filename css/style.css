@@ -346,11 +346,16 @@ body {
 .konsul h1 {
   text-align: center;
   margin-top: 4rem;
+  margin-bottom: 3rem;
   font-size: 4rem;
   line-height: 6rem;
 }
 
-.konsul .button-wa {
+.konsul h2 {
+  margin-bottom: 1rem;
+}
+
+.button-wa {
   background-color: var(--whatsapp);
   border: 2px solid var(--whatsapp);
   color: white;
@@ -376,18 +381,18 @@ body {
 
 /* FOOTER */
 footer {
-  padding: 5rem 8%;
   background-color: white;
 }
 
 footer .footer-content {
+  padding: 5rem 8%;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
 .footer-content .footer-kiri {
-  width: 35%;
+  width: 30%;
   flex: 1 1 15rem;
 }
 
